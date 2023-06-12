@@ -5,25 +5,21 @@ let imageSrc = browser.runtime.getURL("replacemenet/leaf.png")
 
 /**
  * Changes an existing stylesheet rule.
- * @param {string} stylesheet The stylesheet object.
+ * @param {CSSStyleSheet} stylesheet The stylesheet object.
  * @param {string} selector The style selector.
  * @param {string} property The style property.
  * @param {string} value The new style value.
  */
 function changeStylesheetRule(stylesheet, selector, property, value) {
-	selector = selector.toLowerCase();
-	property = property.toLowerCase();
-	value = value.toLowerCase();
-
-	for(var i = 0; i < stylesheet.cssRules.length; i++) {
-		var rule = stylesheet.cssRules[i];
-		if(rule.selectorText === selector) {
-			rule.style[property] = value;
-			return;
+	for (const i in stylesheet.cssRules) {
+		const rule = stylesheet.cssRules.item(i)
+		if (rule.selectorText === selector) {
+			rule.style[property] = value
+			return
 		}
 	}
   
-	stylesheet.insertRule(selector + " { " + property + ": " + value + "; }", 0);
+	stylesheet.insertRule(`${selector}" { "${property}": ${value}"; }`, 0);
 }
 
 // Update rules
