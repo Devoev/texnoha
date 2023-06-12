@@ -25,7 +25,7 @@ function changeStylesheetRule(stylesheet, selector, property, value) {
 
 // Update rules
 const leaf_white_src = "https://cdn.discordapp.com/attachments/693572577532313770/1117903633711906977/leaf_white.png"
-const leaf_grey_src = "https://cdn.discordapp.com/attachments/693572577532313770/1117903633711906977/leaf_white.png"
+const leaf_grey_src = "https://cdn.discordapp.com/attachments/693572577532313770/1117912171154776074/leaf_grey.png"
 const leaf_green_src = "https://cdn.discordapp.com/attachments/693572577532313770/1117870535070724268/leaf.png"
 
 changeStylesheetRule(stylesheet, ".editor-menu-icon.fa", "background", `url(${leaf_white_src}) 50% center / contain no-repeat`)
