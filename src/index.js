@@ -19,10 +19,18 @@ function changeStylesheetRule(stylesheet, selector, property, value) {
 		}
 	}
   
-	stylesheet.insertRule(`${selector}" { "${property}": ${value}"; }`, 0);
+	console.error(`Style with selector ${selector} not found!`);
+	stylesheet.insertRule(`${selector} { ${property}: ${value}; }`, 0);
 }
 
 // Update rules
-//changeStylesheetRule(stylesheet, ".editor-menu-icon.fa", "background", `url(${imageSrc}) 50% center / contain no-repeat`)
 const leaf_white_src = "https://cdn.discordapp.com/attachments/693572577532313770/1117903633711906977/leaf_white.png"
+const leaf_grey_src = "https://cdn.discordapp.com/attachments/693572577532313770/1117903633711906977/leaf_white.png"
+const leaf_green_src = "https://cdn.discordapp.com/attachments/693572577532313770/1117870535070724268/leaf.png"
+
 changeStylesheetRule(stylesheet, ".editor-menu-icon.fa", "background", `url(${leaf_white_src}) 50% center / contain no-repeat`)
+changeStylesheetRule(stylesheet, ".multi-selection-ongoing::before, .no-file-selection::before, .no-history-available::before, .pdf-empty::before", "background", `url(${leaf_grey_src}) 50%/200px no-repeat`)
+changeStylesheetRule(stylesheet, ".navbar-default .navbar-brand", "background-image", `url(${leaf_white_src})`)
+changeStylesheetRule(stylesheet, ".fat-footer .footer-brand", "background-image", `url(${leaf_white_src})`)
+changeStylesheetRule(stylesheet, ".loading-screen-brand", "background", `url(${leaf_grey_src}) no-repeat bottom/100%`)
+changeStylesheetRule(stylesheet, ".loading-screen-brand::after", "background", `url(${leaf_green_src}) no-repeat bottom/100%`)
