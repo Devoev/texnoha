@@ -9,7 +9,9 @@
 		"64": "assets/icon.png"
 	},
 	
-	"web_accessible_resources": ["assets/leaf.png"],
+	"web_accessible_resources": [
+		"assets/leaf.png"
+	],
 
 	"content_scripts": [
 		{
