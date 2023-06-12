@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	"name": "Texnoha",
+	"version": "1.0",
+
+	"description": "Replaces the Overleaf logo with the Konoha leaf symbol.",
+
+	"icons": {
+		"64": "assets/icon.png"
+	},
+	
+	"web_accessible_resources": ["assets/leaf.png"],
+
+	"content_scripts": [
+		{
+			"matches": ["*://sharelatex.tu-darmstadt.de/*"],
+			"js": ["src/index.js"]
+		}
+	]
+}
