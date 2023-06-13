@@ -10,7 +10,9 @@
 	},
 	
 	"web_accessible_resources": [
-		"assets/leaf.png"
+		"assets/leaf.png",
+		"assets/leaf_grey.png",
+		"assets/leaf_white.png"
 	],
 
 	"content_scripts": [
