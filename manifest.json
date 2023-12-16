@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Texnoha",
-	"version": "1.0",
+	"version": "1.1",
 
 	"description": "Replaces the Overleaf logo with the Konoha leaf symbol.",
 
