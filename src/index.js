@@ -11,9 +11,7 @@ favicon.setAttribute("href", leaf_green_src)
 let stylesheet = document.styleSheets[0]
 for (const sheet of document.styleSheets) {
 	try {
-		console.log(sheet.cssRules.length)
 		if (sheet.cssRules.length > stylesheet.cssRules.length) {
-			console.log("Updating sheet")
 			stylesheet = sheet
 		}
 	} catch (error) {}
