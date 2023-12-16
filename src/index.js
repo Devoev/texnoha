@@ -7,10 +7,20 @@ const leaf_white_src = browser.runtime.getURL("assets/leaf_white.png")
 const favicon = document.querySelector("link[rel~='icon']")
 favicon.setAttribute("href", leaf_green_src)
 
-// Get stylesheet of editor page
-const stylesheet = document.styleSheets[7]
+// Get stylesheet of editor page (stylesheet with max rules)
+let stylesheet = document.styleSheets[0]
+for (const sheet of document.styleSheets) {
+	try {
+		console.log(sheet.cssRules.length)
+		if (sheet.cssRules.length > stylesheet.cssRules.length) {
+			console.log("Updating sheet")
+			stylesheet = sheet
+		}
+	} catch (error) {}
+}
+
+// Update style rules
 if (stylesheet) {
-	// Update style rules
 	changeStylesheetRule(stylesheet, ".editor-menu-icon.fa", "background", `url(${leaf_white_src}) 50% center / contain no-repeat`)
 	changeStylesheetRule(stylesheet, ".multi-selection-ongoing::before, .no-file-selection::before, .no-history-available::before, .pdf-empty::before", "background", `url(${leaf_grey_src}) 50%/200px no-repeat`)
 	changeStylesheetRule(stylesheet, ".navbar-default .navbar-brand", "background-image", `url(${leaf_white_src})`)
