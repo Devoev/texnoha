@@ -12,3 +12,6 @@ Build and sign it yourself using [web-ext](https://extensionworkshop.com/documen
 - Sign the extension `web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET`
 
 Download signed extension from [TODO](todo)
+
+## Know issues
+- Doesn't work with [Dark Reader](https://darkreader.org/) enabled
