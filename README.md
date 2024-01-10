@@ -6,12 +6,14 @@ This Firefox extension replaces the [Overleaf logo](https://images.ctfassets.net
 | <img src=https://images.ctfassets.net/nrgyaltdicpt/6qSXAo1CYEeBn5RkKLOR64/19c74bfb9a32772e353ff25c6f0070f5/ologo_square_colour_light_bg.png width=250> | <img src=https://raw.githubusercontent.com/Devoev/texnoha/main/assets/leaf.png width=250> |
 
 ## How to install
-Build and sign it yourself using [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
+### Automatic download and install
+Download the signed extension from [the addons store](https://addons.mozilla.org/en-US/firefox/addon/texnoha/)
+
+### Manual install
+You can also build and sign it yourself using [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)
 - Install web-ext `npm install --global web-ext`
 - Package the extension `web-ext build`
 - Sign the extension `web-ext sign --api-key=$AMO_JWT_ISSUER --api-secret=$AMO_JWT_SECRET`
-
-Download signed extension from [TODO](todo)
 
 ## Know issues
 - Doesn't work with [Dark Reader](https://darkreader.org/) enabled
